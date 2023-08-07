@@ -1,0 +1,20 @@
+If Windows (10/11) is making the Java application's windows too small,
+not taking account of system DPI scaling, do this:
+
+Right click on
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+
+Choose Properties
+
+Compatibility tab
+
+Click on "Change high DPI settings", which opens a sub-dialogue
+
+Near the bottom: Check "Override high DPI scaling behaviour"
+and also change the drop-down from "Application" to "System"
+
+Click OK to go back to the main properties dialogue.
+
+Apply and then OK
+
+
