@@ -12,3 +12,8 @@ RTG generates limitless terrain in real time as an observer moves around in it o
 I devised the RTG algorithms in the early 1980s, when the first versions of The Forest were published for very small computers. They are therefore small and fast.
 
 I see the new Java version as a kind of reference implementation because it has much clearer structure than earlier versions, for others to understand.
+
+This algorithm was first developed in 1983 in Z80 assembly code for the Sinclair ZX Spectrum (48kB RAM).
+It was converted to Javascript in 2014.
+C++ and Java versions were made for comparison in 2021.
+Experiments in 2023 to implement this as non-graphical WebGL did not improve speed for a map 800 x 600. WebGPU may be better when more generally available.
