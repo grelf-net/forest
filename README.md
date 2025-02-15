@@ -1,7 +1,7 @@
 # forest
 Java demonstration of the Relf Terrain Generator, in the form of a partial conversion of The Forest (grelf.itch.io/forest) from Javascript. Partial because this is work in progress. You can explore the terrain both above and under ground but not yet run orienteering courses.
 
-The zip file contains complete sources, the built JAR file you should be able to run, and all of the images required when the program runs. The licence is MIT because I really want people to use my algorithms and take them further.
+The zip file contains complete sources and all of the images required when the program runs. Load them into your IDE to build and run (I use Apache Netbeans). The licence is MIT because I really want people to use my algorithms and take them further.
 
 I am just a hobbyist these days (retired) so you only require Java SE8 for compiling the sources.
 
