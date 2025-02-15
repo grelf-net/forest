@@ -3,6 +3,8 @@ Java demonstration of the Relf Terrain Generator, in the form of a partial conve
 
 The zip file contains complete sources and all of the images required when the program runs. Load them into your IDE to build and run (I use Apache Netbeans). The licence is MIT because I really want people to use my algorithms and take them further.
 
+25/2/15: The file ForestJava.jar does now include the images as resources so it can be run by a simple java -jar command.
+
 I am just a hobbyist these days (retired) so you only require Java SE8 for compiling the sources.
 
 The class net.grelf.forest.Terrain is the generator for above ground. You can find the underground generator in net.grelf.forest.Mine and you should see that complicated dungeon layouts can be made extremely simply and fast.
