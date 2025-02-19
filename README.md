@@ -3,7 +3,7 @@ Java demonstration of the Relf Terrain Generator, in the form of a partial conve
 
 The zip file contains complete sources and all of the images required when the program runs. Load them into your IDE to build and run (I use Apache Netbeans). The licence is MIT because I really want people to use my algorithms and take them further.
 
-25/2/15: The file ForestJava.jar does now include the images as resources so it can be run by a simple java -jar command.
+The file ForestJava.jar does include the images as resources so it can be run by a simple java -jar command.
 
 I am just a hobbyist these days (retired) so you only require Java SE8 for compiling the sources.
 
@@ -17,5 +17,5 @@ I see the new Java version as a kind of reference implementation because it has 
 
 This algorithm was first developed in 1983 in Z80 assembly code for the Sinclair ZX Spectrum (48kB RAM).
 It was converted to Javascript in 2014.
-C++ and Java versions were made for comparison in 2021.
+C++ and Java versions were made for comparison in 2021 and I have added further things to the Java version since then.
 Experiments in 2023 to implement this as non-graphical WebGL did not improve speed for a map 800 x 600. WebGPU may be better when more generally available.
