@@ -1,0 +1,49 @@
+Making my open worlds multiplayer?
+
+1. Game start for each player:
+	Ask server for list of players positions. (A)
+	Set starting position far enough away from those others.
+	Send position to server. (B)
+	Server allocates an	id and sends that back.
+	Server keeps record of position for that id.
+	
+2. Whenever a player tries to move:
+	Send id to server. (C)
+	Get back a list of other players positions.
+	Any positions within view get avatar (just a sprite for now) plotted.
+	If move does not go too close to another player. 5 metres?
+	{ Make the move.
+	  Send id and new position to server. (D)
+	  Server updates position for that id.
+	}
+	
+3. Avoid memory full:
+	If a particular id has not been sent to the server for 24 hours remove it from the list.
+	Use timestamps for this.
+
+// JS calls to implement that:
+
+A.  fetch("https:myforest.uk/php/mp.php");
+returns list of all players positions, empty if there are none
+
+B.  fetch("https:myforest.uk/php/mp.php?x=...&y=...");
+creates new id with given x and y
+returns the new id and list of all other players positions
+
+C.  fetch("https:myforest.uk/php/mp.php?id=...");
+timestamps the given id (for possible removal as in 3).
+returns list of all other players positions (omitting the given id)
+
+D.  fetch("https:myforest.uk/php/mp.php?id=...&x=...&y=...");
+updates the list entry for this id with new x and y
+timestamps the given id (for possible removal as in 3).
+returns confirmation
+
+// Server side PHP needed:
+
+A new id will be the millisecond timestamp of when the server receives that first request.
+Need to increment if there is a coincidence (even though very unlikely).
+The server will use an array for the list of data, each entry being an object {id, x, y, t}.
+Responses will use JSON.
+
+There is a CORS issue to work around if I use this for my games on itch.io because I think itch.io doesn't provide facilities for us to put our own PHP (or other code) on their server.
