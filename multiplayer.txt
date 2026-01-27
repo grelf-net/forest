@@ -46,4 +46,6 @@ Need to increment if there is a coincidence (even though very unlikely).
 The server will use an array for the list of data, each entry being an object {id, x, y, t}.
 Responses will use JSON.
 
-There is a CORS issue to work around if I use this for my games on itch.io because I think itch.io doesn't provide facilities for us to put our own PHP (or other code) on their server.
+There is a CORS issue to work around if I use this for my games on itch.io because I think 
+itch.io doesn't provide facilities for us to put our own PHP (or other code) on their server.
+
