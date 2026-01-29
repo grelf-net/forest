@@ -46,6 +46,9 @@ Need to increment if there is a coincidence (even though very unlikely).
 The server will use an array for the list of data, each entry being an object {id, x, y, t}.
 Responses will use JSON.
 
+The array should be a database table but for the first version, to prove these ideas, 
+I will just use a file. I will need to deal with concurrency issues, given that PHP's 
+flock() does not work on all systems.
+
 There is a CORS issue to work around if I use this for my games on itch.io because I think 
 itch.io doesn't provide facilities for us to put our own PHP (or other code) on their server.
-
