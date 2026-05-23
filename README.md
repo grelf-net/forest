@@ -1,13 +1,17 @@
 # forest
-Java demonstration of the Relf Terrain Generator, in the form of a partial conversion of The Forest (grelf.itch.io/forest) from Javascript. Partial because this is work in progress. You can explore the terrain both above and under ground but not yet run orienteering courses.
+1. Java demonstration of the Relf Terrain Generator (RTG), in the form of a partial conversion of The Forest (grelf.itch.io/forest) from Javascript. Partial because this is work in progress. You can explore the terrain both above and under ground but not yet run orienteering courses.
 
-The zip file contains complete sources and all of the images required when the program runs. Load them into your IDE to build and run (I use Apache Netbeans). The licence is MIT because I really want people to use my algorithms and take them further.
+The zip file contains complete sources and all of the images required when the program runs. Load them into your IDE to build and run (I use Apache Netbeans). This is public domain now because I really want people to use my algorithms and take them further.
+
+I am just a hobbyist these days (retired software developer) so you only require Java SE8 for compiling the sources.
+
+The class net.grelf.forest.Terrain is the generator for above ground. You can find the underground generator in net.grelf.forest.Mine and you should see that complicated dungeon layouts can be made extremely simply and fast.
 
 The file ForestJava.jar does include the images as resources so it can be run by a simple java -jar command.
 
-I am just a hobbyist these days (retired) so you only require Java SE8 for compiling the sources.
+2. PDF files giving details of how the generator works and how scenes may be displayed in perspective.
 
-The class net.grelf.forest.Terrain is the generator for above ground. You can find the underground generator in net.grelf.forest.Mine and you should see that complicated dungeon layouts can be made extremely simply and fast.
+3. terrain00.js is an annotated Javascript version of RTG, for use in browsers. 
 
 RTG generates limitless terrain in real time as an observer moves around in it or scrolls a map. There are no chunks, tiles or mesh in the terrain itself: the observer can move smoothly by any amount in any direction, aided by compass and map. (Tiles are used in the scene view however.)
 
