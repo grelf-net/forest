@@ -170,7 +170,7 @@ case FEATURES.T: feature = pd; break;
   if (this.LAKE_HT0 > ht) return {height:ht, terrain:TERRAINS.MUD, feature:feature, code:""};
   if (FEATURES.NONE === feature)
   { var xryr = xr * yr;
-    a = this.calcProf(this.b2, xr, this.a3, yr);// NB: Swapped a/b tables
+    a = this.calcProf(this.B2, xr, this.A3, yr);// NB: Swapped a/b tables
     var f = Math.round(a * xryr * this.RECIP128) & 0xfff;
     if (4 === f) 
     { var xyff = xryr & 0xff;
@@ -190,13 +190,13 @@ case FEATURES.T: feature = pd; break;
   }
   if (!this.woodOnly)
   { if (ht > this.SNOW_HT0) return {height:ht, terrain:TERRAINS.MUD, feature:feature, code:code};
-    a = this.calcProf(this.a1, x, this.b1, y);
+    a = this.calcProf(this.A1, x, this.B1, y);
     if (120 > a)
     { if (feature !== FEATURES.T) feature = FEATURES.NONE;// Town can have T only
       return {height:ht, terrain:TERRAINS.TOWN, feature:feature, code:""};
     }//:ZY
-    a = this.calcProf(this.a2, x, this.b2, y);
-    b = this.calcProf(this.a3, x, this.b3, y);
+    a = this.calcProf(this.A2, x, this.B2, y);
+    b = this.calcProf(this.A3, x, this.B3, y);
     if (255 > a)
     { if (255 > b) return {height:ht, terrain:TERRAINS.GRASS, feature:feature, code:code};
       if (77 > a && ht > this.MIN_QUARRY_HT) // Quarry in moor
